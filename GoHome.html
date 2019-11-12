@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html>
+<head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+</head>
 <body>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+        <div class="buttons">
+                <a href="#" onclick="toggleVisibility('Menu1');">Menu1</a>
+                <a href="#" onclick="toggleVisibility('Menu2');">Menu2</a>
+                <a href="#" onclick="toggleVisibility('Menu3');">Menu3</a>
+              </div>
+               
+                <div id="Menu1">I'm container one</div>
+                <div id="Menu2" style="display: none;">I'm container two</div>
+                <div id="Menu3" style="display: none;">I'm container three</div>
 
 </body>
+<script src="script.js"></script>
 </html>

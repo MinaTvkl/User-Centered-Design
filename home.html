@@ -20,21 +20,26 @@
       <div class="">
         <div class="row">
           <div class="user-input">
-            <input type="text" name="from" placeholder="From">
+            <input onchange="processUserInput()" id="from-input" type="text" name="from" placeholder="From">
           </div>
         </div>
         <div class="row">
           <div class="user-input">
-            <input type="text" name="to" placeholder="To">
+            <input onchange="processUserInput()" id="to-input" type="text" name="to" placeholder="To">
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row predetermined">
         <div class="button-container center">
           <button type="button" name="predetermined-home"><i class="material-icons-outlined md-36">home</i></button>
         </div>
         <div class="button-container center">
           <button type="button" name="predetermined-work"><i class="material-icons-outlined md-36">work_outline</i></button>
+        </div>
+      </div>
+      <div class="row search-route hidden">
+        <div class="button-container background-green center">
+          <button type="button" name="search-route">GO</button>
         </div>
       </div>
     </div>
@@ -52,7 +57,24 @@
     </div>
   </div>
 
-  <script src="app.js"></script>
+  <script>
+    function processUserInput() {
+      var fromInput = document.getElementById("from-input");
+      var toInput = document.getElementById("to-input");
+
+      var predetermined = document.getElementsByClassName("predetermined")[0];
+      var searchRoute = document.getElementsByClassName("search-route")[0];
+
+      if (fromInput && fromInput.value && toInput && toInput.value) {
+        predetermined.classList.add("hidden");
+        searchRoute.classList.remove("hidden");
+      } else {
+        predetermined.classList.remove("hidden");
+        searchRoute.classList.add("hidden");
+      }
+    }
+  </script>
+
 </body>
 
 </html>

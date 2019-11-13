@@ -16,6 +16,10 @@ div {
   top: 0;
 }
 
+.row {
+  height: 32px;
+}
+
 .bottom {
   bottom: 0;
 }
@@ -109,4 +113,16 @@ a.button {
   appearance: button;
   text-decoration: none;
   color: initial;
+}
+
+.hidden {
+  display: none;
+}
+
+.background-green button {
+  background-color: #58B947;
+  padding: 0 20px 0 20px;
+  border-radius: 5px;
+  color: white;
+  line-height: 32px;
 }

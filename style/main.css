@@ -1,0 +1,112 @@
+body {
+  width: 100%;
+  background-color: black;
+  overflow-x: hidden;
+}
+
+div {
+  font-family: 'Roboto', sans-serif;
+}
+
+.nav {
+  position: relative;
+}
+
+.top {
+  top: 0;
+}
+
+.bottom {
+  bottom: 0;
+}
+
+.logo-container>img {
+  height: 30px;
+}
+
+.content {
+  width: 300px;
+  background-color: white;
+  margin: auto;
+}
+
+button, input[type="submit"], input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+input[type=text] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid #CCCCCC;
+  background-color: #f7f8fa;
+}
+
+input {
+  box-sizing: border-box;
+}
+
+.nav {
+  padding: 0 10px;
+}
+
+.row {
+  padding: 5px 5px;
+}
+
+.row {
+  display: flex;
+}
+
+.center {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.static-text {
+  flex: 1;
+}
+
+.user-input {
+  flex: 3;
+}
+
+.user-input>input {
+  width: 100%;
+  line-height: 30px;
+  padding: 0 10px 0 10px;
+  border-radius: 5px;
+}
+
+#map {
+  height: 400px;
+  background-color: grey;
+}
+
+.button-container {
+  flex: 1;
+}
+
+.active i {
+  color: #58B947;
+}
+
+.not-active i {
+  color: #CCCCCC;
+}
+
+a.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  color: initial;
+}

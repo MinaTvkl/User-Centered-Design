@@ -1,27 +1,63 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-        <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="style/main.css">
 </head>
+
 <body>
-        <div class="login-page">
-                <div class="form">
-                  <form class="register-form">
-                    <input type="text" placeholder="name"/>
-                    <input type="password" placeholder="password"/>
-                    <input type="text" placeholder="email address"/>
-                    <button>create</button>
-                    <p class="message">Already registered? <a href="#">Sign In</a></p>
-                  </form>
-                  <form class="login-form">
-                    <input type="text" placeholder="username"/>
-                    <input type="password" placeholder="password"/>
-                    <button>login</button>
-                    <p class="message">Not registered? <a href="#">Create an account</a></p>
-                  </form>
-                </div>
-              </div>
+  <div class="content">
+    <div class="nav top" id="nav_top">
+      <div class="row">
+        <div class="logo-container center">
+          <img src="../images/logo.svg">
+        </div>
+      </div>
+      <div class="">
+        <div class="row">
+        </div>
+        <div class="row">
+        </div>
+      </div>
+      <div class="row predetermined">
+        </div>
+      <div class="row search-route hidden">
+        <div class="button-container background-green center">
+          <button type="button" name="search-route">GO</button>
+        </div>
+      </div>
+    </div>
+    <div id="map" class="row">
+            <div class="form" id="LogIn">
+              <form class="register-form">
+                <input type="text" placeholder="name" />
+                <input type="password" placeholder="password" />
+                <input type="text" placeholder="email address" />
+                <button>create</button>
+                <p class="message">Already registered? <a href="#">Sign In</a></p>
+              </form>
+              <form class="login-form">
+                <input type="text" placeholder="username" />
+                <input type="password" placeholder="password" />
+                <button>login</button>
+                <p class="message">Not registered? <a href="#">Create an account</a></p>
+              </form>
+          </div>
+    </div>
+
+    <div class="nav bottom" id="nav_bottom">
+      <div class="row">
+        <div class="button-container center not-active">
+          <a href="LogIn.html" class="button"><i class="material-icons-outlined md-36">account_circle</i></a>
+        </div>
+        <div class="button-container center active">
+          <a href="home.html" class="button"><i class="material-icons-outlined md-36">map</i></a>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 <script src="script.js"></script>
+
 </html>

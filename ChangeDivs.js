@@ -1,4 +1,4 @@
-var divs = ["Menu1", "Menu2", "Menu3"]; // changed to three
+var divs = ["Home", "GoHome", "GoToWork"]; // changed to 2
 var visibleDivId = null;
 function toggleVisibility(divId) {
   if(visibleDivId === divId) {

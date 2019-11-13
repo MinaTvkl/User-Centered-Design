@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+    rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/style/main.css">
   <title></title>
 </head>
@@ -31,10 +33,11 @@
       </div>
       <div class="row predetermined">
         <div class="button-container center">
-          <button type="button" name="predetermined-home"><i class="material-icons-outlined md-36">home</i></button>
+          <button type="button" onclick="toggleVisibility('GoHome');" name="predetermined-home"><i class="material-icons-outlined md-36">home</i></button>
         </div>
         <div class="button-container center">
-          <button type="button" name="predetermined-work"><i class="material-icons-outlined md-36">work_outline</i></button>
+          <button type="button" onclick="toggleVisibility('GoToWork');" name="predetermined-work"><i
+              class="material-icons-outlined md-36">work_outline</i></button>
         </div>
       </div>
       <div class="row search-route hidden">
@@ -43,15 +46,25 @@
         </div>
       </div>
     </div>
-    <div id="map" class="row"></div>
+    <div id="map" class="row">
+      <div id="Home">
+        <img id="HomeImg" src="images/Home.jpg" alt="home page map">
+      </div>
+      <div id="GoHome" style="display: none;">
+        I'm container two
+      </div>
+      <div id="GoToWork" style="display: none;">
+        I'm container three
+      </div>
+    </div>
 
     <div class="nav bottom">
       <div class="row">
         <div class="button-container center not-active">
-          <a href="profile.html" class="button"><i class="material-icons-outlined md-36">account_circle</i></a>
+          <a href="LogIn.html" class="button"><i class="material-icons-outlined md-36">account_circle</i></a>
         </div>
         <div class="button-container center active">
-          <a href="main.html" class="button"><i class="material-icons-outlined md-36">map</i></a>
+          <a href="home.html" class="button"><i class="material-icons-outlined md-36">map</i></a>
         </div>
       </div>
     </div>
@@ -74,7 +87,7 @@
       }
     }
   </script>
-
+  <script src="ChangeDivs.js"></script>
 </body>
 
 </html>

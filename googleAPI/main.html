@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My google Maps</title>
+		<meta charset="utf8"/>
+		<link rel="stylesheet" type="text/css" href="mainStyle.css">
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<div id="floating-panel">
+			<b>Start: </b>
+			<select id="start">
+				<option value="none" selected disabled hidden> Select an Option </option>
+				<option value="Cais do Sodré, Lisboa">Cais do Sodré</option>
+				<option value="Belém, Lisboa">Belém</option>
+				<option value="Odivelas, Lisboa">Odivelas</option>
+			</select>
+			<b>End: </b>
+			<select id="end">
+				<option value="none" selected disabled hidden> Select an Option </option>
+				<option value="Instituto Superior Técnico, Lisboa">IST</option>
+				<option value="Centro Comercial Colombo, Lisboa">Colombo</option>
+				<option value="Marquês de Pombal, Lisboa">Marquês de Pombal</option>
+			</select>
+			<!-- Dont know why this doesn't work, but it doesn't work
+			<b>Type: </b>
+			<select id="type">
+				<option value="none" selected disabled hidden> Select an Option </option>
+				<option value="TRANSIT">Public Transport</option>
+				<option value="DRIVING">Car</option>
+				<option value="BICYCLING">Bike</option>
+				<option value="WALKING">Walking</option>
+			</select>
+			-->
+		</div>
+
+		<div id="map"></div>
+			<!-- Replace the value of the key parameter with your own API key. -->
+		<script async defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHLEWwDpg-DyyJhDzehuHP39vzwicOxDg&callback=initMap">
+		</script>
+	</body>
+</html>

@@ -2,7 +2,13 @@
 <html>
 
 <head>
+  <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="style/main.css">
+  <link rel="stylesheet" type="text/css" href="style/LogIn.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -13,14 +19,6 @@
           <img src="../images/logo.svg">
         </div>
       </div>
-      <div class="">
-        <div class="row">
-        </div>
-        <div class="row">
-        </div>
-      </div>
-      <div class="row predetermined">
-        </div>
       <div class="row search-route hidden">
         <div class="button-container background-green center">
           <button type="button" name="search-route">GO</button>
@@ -28,21 +26,21 @@
       </div>
     </div>
     <div id="map" class="row">
-            <div class="form" id="LogIn">
-              <form class="register-form">
-                <input type="text" placeholder="name" />
-                <input type="password" placeholder="password" />
-                <input type="text" placeholder="email address" />
-                <button>create</button>
-                <p class="message">Already registered? <a href="#">Sign In</a></p>
-              </form>
-              <form class="login-form">
-                <input type="text" placeholder="username" />
-                <input type="password" placeholder="password" />
-                <button>login</button>
-                <p class="message">Not registered? <a href="#">Create an account</a></p>
-              </form>
-          </div>
+      <div class="form" id="LogIn">
+        <form class="register-form">
+          <input type="text" placeholder="name" />
+          <input type="password" placeholder="password" />
+          <input type="text" placeholder="email address" />
+          <button>create</button>
+          <p class="message">Already registered? <a href="#">Sign In</a></p>
+        </form>
+        <form class="login-form">
+          <input type="text" placeholder="username" />
+          <input type="password" placeholder="password" />
+          <a id="button" href="PersonalDetails.html">login</a>
+          <p class="message">Not registered? <a href="#">Create an account</a></p>
+        </form>
+      </div>
     </div>
 
     <div class="nav bottom" id="nav_bottom">
@@ -58,6 +56,5 @@
   </div>
 
 </body>
-<script src="script.js"></script>
 
 </html>

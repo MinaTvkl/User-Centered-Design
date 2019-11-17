@@ -31,6 +31,13 @@
           </div>
         </div>
       </div>
+      <div class="row search-route ">
+          <div class="button-container background-green center">
+            <a id="GoButton" href="PublicTransport.html">GO</a>
+            <!-- changed this temporarily so that it is always visiable for the user
+              <button type="button" name="search-route">GO</button> -->
+          </div>
+        </div>
       <div class="row predetermined">
         <div class="button-container center">
           <button type="button" onclick="toggleVisibility('GoHome');" name="predetermined-home"><i class="material-icons-outlined md-36">home</i></button>
@@ -40,21 +47,16 @@
               class="material-icons-outlined md-36">work_outline</i></button>
         </div>
       </div>
-      <div class="row search-route hidden">
-        <div class="button-container background-green center">
-          <button type="button" name="search-route">GO</button>
-        </div>
-      </div>
     </div>
     <div id="map" class="row">
       <div id="Home">
         <img id="HomeImg" src="images/Home.jpg" alt="home page map">
       </div>
       <div id="GoHome" style="display: none;">
-        I'm container two
+        <img id="GoHomeImg" src="images/GoHome.jpg" alt="home route">
       </div>
       <div id="GoToWork" style="display: none;">
-        I'm container three
+        <img id="WorkImg" src="images/GoToWork.jpg" alt="work route">
       </div>
     </div>
 

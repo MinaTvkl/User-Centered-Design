@@ -136,6 +136,16 @@ a.button {
   height: 400px;
   object-fit: cover;
 }
+#GoButton{
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  }
 /*
   CSS FOR LOGIN
   */

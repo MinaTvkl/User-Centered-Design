@@ -239,3 +239,17 @@ body {
 #LogIn{
   margin: auto;
 }
+
+/*
+  CSS FOR PersonalDetails
+  */
+#StatisticImg{
+  width: 300px;
+  height: 600px;
+  object-fit: scale-down;
+}  
+#ProfileImg{
+  width: 300px;
+  height: 600px;
+  object-fit: scale-down;
+}  

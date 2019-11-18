@@ -4,9 +4,7 @@
 <head>
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/style/main.css">
   <title></title>
 </head>
@@ -22,43 +20,31 @@
       <div class="">
         <div class="row">
           <div class="user-input">
-            <input onchange="processUserInput()" id="from-input" type="text" name="from" placeholder="From">
+            <input onkeypress="changeGoButtonOnUserInput()" id="from-input" type="text" name="from" placeholder="From">
           </div>
         </div>
         <div class="row">
           <div class="user-input">
-            <input onchange="processUserInput()" id="to-input" type="text" name="to" placeholder="To">
+            <input onkeypress="changeGoButtonOnUserInput()" id="to-input" type="text" name="to" placeholder="To">
           </div>
         </div>
       </div>
-      <div class="row search-route ">
-          <div class="button-container background-green center">
-            <a id="GoButton" href="PublicTransport.html">GO</a>
-            <!-- changed this temporarily so that it is always visiable for the user
-              <button type="button" name="search-route">GO</button> -->
-          </div>
+      <div class="row search-route hidden">
+        <div class="button-container background-green center">
+          <button type="button" name="search-route">GO</button>
         </div>
+      </div>
       <div class="row predetermined">
         <div class="button-container center">
           <button type="button" onclick="toggleVisibility('GoHome');" name="predetermined-home"><i class="material-icons-outlined md-36">home</i></button>
         </div>
         <div class="button-container center">
-          <button type="button" onclick="toggleVisibility('GoToWork');" name="predetermined-work"><i
-              class="material-icons-outlined md-36">work_outline</i></button>
+          <button type="button" onclick="toggleVisibility('GoToWork');" name="predetermined-work"><i class="material-icons-outlined md-36">work_outline</i></button>
         </div>
       </div>
     </div>
-    <div id="map" class="row">
-      <div id="Home">
-        <img id="HomeImg" src="images/Home.jpg" alt="home page map">
-      </div>
-      <div id="GoHome" style="display: none;">
-        <img id="GoHomeImg" src="images/GoHome.jpg" alt="home route">
-      </div>
-      <div id="GoToWork" style="display: none;">
-        <img id="WorkImg" src="images/GoToWork.jpg" alt="work route">
-      </div>
-    </div>
+    <!-- <div id="map" class="row">
+    </div> -->
 
     <div class="nav bottom">
       <div class="row">
@@ -71,25 +57,7 @@
       </div>
     </div>
   </div>
-
-  <script>
-    function processUserInput() {
-      var fromInput = document.getElementById("from-input");
-      var toInput = document.getElementById("to-input");
-
-      var predetermined = document.getElementsByClassName("predetermined")[0];
-      var searchRoute = document.getElementsByClassName("search-route")[0];
-
-      if (fromInput && fromInput.value && toInput && toInput.value) {
-        predetermined.classList.add("hidden");
-        searchRoute.classList.remove("hidden");
-      } else {
-        predetermined.classList.remove("hidden");
-        searchRoute.classList.add("hidden");
-      }
-    }
-  </script>
-  <script src="ChangeDivs.js"></script>
+  <script src="script/main.js"></script>
 </body>
 
 </html>

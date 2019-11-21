@@ -2,7 +2,8 @@
 <html>
 
 <head>
-  <link rel="stylesheet" type="text/css" href="style/main.css">
+  <link rel="stylesheet" type="text/css" href="style/userPage.css">
+  <script type="text/javascript" src="ChangeUnitsCo2.js"></script>
 </head>
 
 <body>
@@ -10,37 +11,67 @@
     <div class="nav top" id="nav_top">
       <div class="row">
         <div class="logo-container center">
-          <img src="../images/logo.svg">
-        </div>
-      </div>
-      <div class="">
-        <div class="row">
-        
-        </div>
-        <div class="row">
-        </div>
-      </div>
-      <div class="row predetermined">
-        </div>
-      <div class="row search-route hidden">
-        <div class="button-container background-green center">
-          <button type="button" name="search-route">GO</button>
+          <img src="images/logo.svg">
         </div>
       </div>
     </div>
 
-    <div id="map" class="row">
-      <div id="Home">
-        <img id="ProfileImg" src="images/Profile.png" alt="home page map">
+    <div id="user">
+      <img id="ProfileImg" src="images/Profile.png" alt="home page map">
+      <div id="userText" class="testBorder">
+        <div id="userName">
+          <p>Maria</p>
+        </div>
+        <div id="userDesc">
+          <span>Saved</span>
+          <span name="co2">0.53</span>
+          <img name="unitsImage" width="40" height="40" src="images/co2Kgs.png" onclick="changeUnits()">
+        </div>
       </div>
     </div>
 
-    <div id="map" class="row">
-      <div id="Home">
-        <img id="StatisticImg" src="images/Profile_Statistics.png" alt="home page map">
-      </div>
+    <div id="statistics" class="testBorder">
+      <span class="profileTitle">Statistics</span>
+      <img id="StatisticImg" src="images/Profile_Statistics.png" alt="home page map">
     </div>
 
+    <div id="leaderboard" class="testBorder">
+      <span class="profileTitle">Leaderboard</span> 
+      <table id="leaderboardTable">
+        <thead>
+          <td></td>
+          <td><button class="changeButton" onclick="changeUnits()">Change Units</button></td>
+          <td><img name="unitsImage" width="40" height="40" src="images/co2Kgs.png" onclick="changeUnits()"></td>
+        </thead>
+        <tbody id="leaderboardBody">
+          <tr>
+            <td name="position">1</td>
+            <td name="name">Anna</td>
+            <td name="co2">34.00</td>
+          </tr>
+          <tr>
+            <td name="position">2</td>
+            <td name="name">Max</td>
+            <td name="co2">30.00</td>
+          </tr>
+          <tr>
+            <td name="position">3</td>
+            <td name="name">Kim</td>
+            <td name="co2">15.75</td>
+          </tr>
+          <tr>
+            <td name="position">4</td>
+            <td name="name">Chris</td>
+            <td name="co2">7.30</td>
+          </tr>
+          <tr>
+            <td name="position">5</td>
+            <td name="name">Bernard</td>
+            <td name="co2">6.10</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <div class="nav bottom">
       <div class="row">
@@ -54,4 +85,8 @@
     </div>
   </div>
 </body>
+
+<script type="text/javascript">
+  colourizeRows();
+</script>
 </html>

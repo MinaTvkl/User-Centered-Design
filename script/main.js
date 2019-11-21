@@ -105,7 +105,7 @@ function travelRoute() {
       }
       break
     default:
-      if (fromLocation.value) {
+      if (fromInput.value) {
         fromLocation = fromInput.value
       }
       break

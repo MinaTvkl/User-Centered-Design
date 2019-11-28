@@ -5,7 +5,6 @@ var transportationModes = ["walking", "bicycling", "transit", "driving"];
 
 var LISBON = " ,Lisbon"; //add to google request to make sure it searches in Lisbon
 
-
 window.onload = function(e) {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
@@ -117,9 +116,9 @@ function travelRoute() {
   console.log("From location: " + fromLocation);
   console.log("To location: " + toLocation);
 
-  calculateCO2();
   showRoute();
   showTransportationModeOptions();
+  calculateCO2();
 }
 
 function showPosition(position) {

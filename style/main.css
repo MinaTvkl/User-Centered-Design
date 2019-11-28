@@ -215,3 +215,23 @@ a.button {
   height: 600px;
   object-fit: scale-down;
 }
+
+.co2ToolTip{
+  width: 150px;
+  height: 100px;
+  
+  position: absolute;
+  right: 10px;
+  top: 320px;
+
+  text-align: center;
+
+  background-color: rgba(255,255,255,0.95);
+}
+
+#co2Button{
+  border-color: black;
+  background-color: rgba(100,100,100,0.7);
+  position: relative;
+  bottom: 15px;
+}

@@ -3,6 +3,9 @@ var toLocation = "";
 var curTransportationMode = "walking";
 var transportationModes = ["walking", "bicycling", "transit", "driving"];
 
+var LISBON = " ,Lisbon"; //add to google request to make sure it searches in Lisbon
+
+
 window.onload = function(e) {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
@@ -127,8 +130,8 @@ function showRoute() {
   var mapDiv = document.getElementById("map");
 
   mapDiv.innerHTML = '<iframe frameborder="0" src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAHLEWwDpg-DyyJhDzehuHP39vzwicOxDg' +
-    '&origin=' + fromLocation +
-    '&destination=' + toLocation +
+    '&origin=' + fromLocation + LISBON+
+    '&destination=' + toLocation + LISBON+
     '&mode=' + curTransportationMode + '" allowfullscreen> < /iframe > ';
 }
 
@@ -157,6 +160,7 @@ function showTravelButton() {
 }
 
 function calculateCO2() {
+  /*
   var url = "https://maps.googleapis.com/maps/api/distancematrix/json?" +
   "&origins=" + fromLocation +
   "&destinations=" + toLocation +
@@ -164,4 +168,79 @@ function calculateCO2() {
   $.getJSON(url, function(data) {
     console.log(data);
   });
+  */
+  console.log("Creating ToolTip");
+  var fromInput = document.getElementById("from-input").value;
+  var toInput = document.getElementById("to-input").value;
+
+  var map = document.getElementById("map");
+  var toolTip = document.createElement("div");
+  toolTip.setAttribute("class","co2ToolTip");
+
+  var co2Text = document.createElement("p");
+  co2Text.innerHTML = "CO<sub>2</sub> Produced: "
+
+  var co2Span = document.createElement("span");
+  co2Span.setAttribute("name","co2");
+  co2Span.innerHTML = ((fromInput.length + toInput.length)*transpCO2Factor()).toFixed(2);
+
+  kgsDisplay = true;
+
+  var co2Img = document.createElement("img");
+  co2Img.setAttribute("name","unitsImage");
+  co2Img.setAttribute("width","30px");
+  co2Img.setAttribute("height","30px");
+  co2Img.src ="./images/co2Kgs.png";
+  co2Img.onclick = function(){changeUnits()};
+
+  co2Button = document.createElement("button");
+  co2Button.setAttribute("id", "co2Button");
+  co2Button.innerHTML = "Change to </br> Bottles";
+  co2Button.onclick = function(){changeUnits()};
+
+  var span = document.createElement("span");
+  span.appendChild(co2Span);
+  span.appendChild(co2Img);
+  span.appendChild(co2Button);
+
+  toolTip.appendChild(co2Text);
+  toolTip.appendChild(span);
+  map.appendChild(toolTip);
+  console.log("Created ToolTip");
+
+}
+
+function transpCO2Factor(){
+  var index = transportationModes.indexOf(curTransportationMode);
+  if(index < 2){
+    return 0;
+  }
+  return index/30;
+}
+
+var kgsDisplay = true;
+
+function changeUnits(){
+  var co2List   = document.getElementsByName("co2");
+  var co2Images = document.getElementsByName("unitsImage");
+  var co2Button = document.getElementById("co2Button");
+  if(kgsDisplay){ //Change to Plastic Bottles
+    for(var i=0; i<co2List.length;i++){
+        co2List[i].innerHTML = parseFloat(co2List[i].innerHTML/0.0826).toFixed(2); //From kgs to bottles
+    }
+    for(var i=0; i<co2Images.length;i++){
+        co2Images[i].src="./images/plasticBottleCartoon.png";
+    }
+    co2Button.innerHTML = "Change to </br> KGS";
+    kgsDisplay = false;
+  } else{ //Change to Kilograms
+    for(var i=0; i<co2List.length;i++){
+        co2List[i].innerHTML = parseFloat(co2List[i].innerHTML*0.0826).toFixed(2); //From bottles to kgs
+    }
+    for(var i=0; i<co2Images.length;i++){
+        co2Images[i].src="./images/co2Kgs.png";
+    }
+    co2Button.innerHTML = "Change to </br> Bottles";
+    kgsDisplay = true;
+  }
 }

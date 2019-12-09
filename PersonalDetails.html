@@ -2,6 +2,8 @@
 <html>
 
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./style/userPage.css">
   <script type="text/javascript" src="./ChangeUnitsCO2.js"></script>
 </head>
@@ -23,10 +25,10 @@
           <p>Maria</p>
         </div>
         <div id="userDesc">
-          <span>Saved</span>
+          <span><b>Saved: </b></span>
           <span name="co2">0.53</span>
-          <img name="unitsImage" width="40" height="40" src="./images/co2Kgs.png" onclick="changeUnits()">
         </div>
+        <img class="co2buttonstyle" style="margin-left:90px; margin-top:-100px;" name="unitsImage" width="40" height="40" src="./images/co2Kgs.png" onclick="changeUnits()">
       </div>
     </div>
 
@@ -37,11 +39,14 @@
 
     <div id="leaderboard" class="testBorder">
       <span class="profileTitle">Leaderboard</span> 
+      </br>
+      <div style="text-align:center;">
+      <img class="co2buttonstyle" name="unitsImage" width="40" height="40" src="./images/co2Kgs.png" onclick="changeUnits()">
       <table id="leaderboardTable">
         <thead>
           <td></td>
-          <td><button id="co2Button" class="changeButton" onclick="changeUnits()">Change to Bottles</button></td>
-          <td><img name="unitsImage" width="40" height="40" src="./images/co2Kgs.png" onclick="changeUnits()"></td>
+          <td></td>
+          <td><button id="co2Button" class="changeButton" onclick="changeUnits()"></button></td> <!--removed text-->
         </thead>
         <tbody id="leaderboardBody">
           <tr>
@@ -71,6 +76,7 @@
           </tr>
         </tbody>
       </table>
+    </div>
     </div>
 
     <div class="nav bottom">

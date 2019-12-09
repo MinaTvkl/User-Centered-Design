@@ -12,7 +12,7 @@ function changeUnits(){
  		for(var i=0; i<co2Images.length;i++){
   			co2Images[i].src="./images/plasticBottleCartoon.png";
  		}
-    	co2Button.innerHTML = "Change to </br> KGS";
+    	co2Button.innerHTML = "";//"Change to </br> kg";
  		kgsDisplay = false;
  	} else{ //Change to Kilograms
 		for(var i=0; i<co2List.length;i++){
@@ -21,14 +21,14 @@ function changeUnits(){
  		for(var i=0; i<co2Images.length;i++){
   			co2Images[i].src="./images/co2Kgs.png";
  		}
-    	co2Button.innerHTML = "Change to </br> Bottles";
+    	co2Button.innerHTML = "";//"Change to </br> Bottles";
  		kgsDisplay = true;
  	}
 }
 
 
 function colourizeRows(){
-	var greenScale = ["#248f24", "#33cc33","#70db70","#adebad","#ebfaeb"]
+	var greenScale = ["#0E3A0E", "#124912","#175B17","#1D721D","#248F24"]
 	var table = document.getElementById("leaderboardBody");
 	for (var i=0; i<table.rows.length; i++){
 		table.rows[i].style.backgroundColor = greenScale[i];

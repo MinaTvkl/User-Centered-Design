@@ -104,11 +104,11 @@ input {
 }
 
 .active i {
-  color: #58B947;
+  color: #CCCCCC;
 }
 
 .not-active i {
-  color: #CCCCCC;
+  color: #58B947;
 }
 
 a.button {
@@ -245,7 +245,6 @@ body {
 }
 
 #leaderboard{
-  height: 185px;
   width: 270px;
 }
 
@@ -277,28 +276,51 @@ body {
 }
 
 #leaderboardTable{
+  border-radius: 5px;
+  color: #ffffffc7;
+  border-width: thin;
+  /*border-collapse:collapse;*/
+  border-spacing: 0.8px;
   position: relative;
-  left: 16%;
+  left: 25%;
+  margin-top: -20px;
 }
-
+/*
 .changeButton{
+  width: 70px;
+  font-size: 12px;
   border-style: solid;
   border-width: 1px;
   border-color: black;
   background-color: gray;
 }
-
+*/
 .profileTitle{
   font-size: 14px;
   font-weight: bold;
-  text-decoration: underline;
 }
 
 #userName{
-  font-size: 20px;
-  text-decoration: underline;
+  font-size: 22px;
+  font-weight: bold;
 }
 #userDesc{
   position: relative;
-  margin-top: -20px;
+  margin-top: 7px;
+}
+
+.co2buttonstyle{
+  border-style: solid;
+  border-color: #58B947;
+  border-radius: 5px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  padding: 2px;
+}
+
+td{
+  padding:3px;
+  min-width: 18px;
 }

@@ -50,15 +50,23 @@
       <div id="travel-options" class="row hidden">
         <div id="walking" class="button-container active center">
           <button type="button" onclick="setActiveTransportationMode(name)" name="walking"><i class="material-icons-outlined md-72">directions_walk</i></button>
+          <p name="co2">0.00</p>
         </div>
         <div id="bicycling" class="button-container center">
           <button type="button" onclick="setActiveTransportationMode(name)" name="bicycling"><i class="material-icons-outlined md-72">directions_bike</i></button>
+          <p name="co2">0.00</p>
         </div>
         <div id="transit" class="button-container center">
           <button type="button" onclick="setActiveTransportationMode(name)" name="transit"><i class="material-icons-outlined md-72">directions_transit</i></button>
+          <p name="co2">0.00</p>
         </div>
         <div id="driving" class="button-container center">
           <button type="button" onclick="setActiveTransportationMode(name)" name="driving"><i class="material-icons-outlined md-72">directions_car</i></button>
+          <p name="co2">0.00</p>
+        </div>
+        <div id="co2ToolTip" class="co2ToolTip">
+          <img name="unitsImage" width="30px" height="30px" src="./images/co2Kgs.png" onclick="changeUnits()">
+          <button id="co2Button" onclick="changeUnits()">Change<br>Units</button>
         </div>
       </div>
     </div>

@@ -217,12 +217,10 @@ a.button {
 }
 
 .co2ToolTip{
-  width: 150px;
-  height: 100px;
+  width: 75px;
+  height: 40px;
   
-  position: absolute;
   right: 10px;
-  top: 320px;
 
   text-align: center;
 
@@ -234,4 +232,10 @@ a.button {
   background-color: rgba(100,100,100,0.7);
   position: relative;
   bottom: 15px;
+  font-size: 12px;
+}
+
+p[name="co2"]{
+  position: relative;
+  margin-top: 0px;
 }

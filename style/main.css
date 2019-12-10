@@ -4,6 +4,10 @@
     --main-row-padding-top-bottom: 5px;
 }
 
+* {
+    -webkit-appearance: none;
+}
+
 body {
     width: 100vw;
     background-color: black;
@@ -168,7 +172,7 @@ a.button {
 }
 
 .xx-large {
-    height: 150px;
+    height: 130px;
 }
 
 .register-container {
@@ -311,8 +315,8 @@ table {
 }
 
 td {
-    font-size: 1.1rem;
-    padding: 0.3em 1em;
+    font-size: 1.0rem;
+    padding: 0.2em 1em;
     text-align: left;
 }
 

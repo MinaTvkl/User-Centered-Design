@@ -2,97 +2,70 @@
 <html>
 
 <head>
-  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="./style/userPage.css">
-  <script type="text/javascript" src="./ChangeUnitsCO2.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./style/main.css">
 </head>
 
 <body>
-  <div class="content">
-    <div class="nav top" id="nav_top">
-      <div class="row">
-        <div class="logo-container center">
-          <img src="./images/logo.svg">
-        </div>
-      </div>
-    </div>
+    <div class="content">
 
-    <div id="user">
-      <img id="ProfileImg" src="images/Profile.png" alt="home page map">
-      <div id="userText" class="testBorder">
-        <div id="userName">
-          <p>Maria</p>
-        </div>
-        <div id="userDesc">
-          <span><b>Saved: </b></span>
-          <span name="co2">0.53</span>
-        </div>
-        <img class="co2buttonstyle" style="margin-left:90px; margin-top:-100px;" name="unitsImage" width="40" height="40" src="./images/co2Kgs.png" onclick="changeUnits()">
-      </div>
-    </div>
 
-    <div id="statistics" class="testBorder">
-      <span class="profileTitle">Statistics</span>
-      <img id="StatisticImg" src="images/Profile_Statistics.png" alt="home page map">
-    </div>
-
-    <div id="leaderboard" class="testBorder">
-      <span class="profileTitle">Leaderboard</span> 
-      </br>
-      <div style="text-align:center;">
-      <img class="co2buttonstyle" name="unitsImage" width="40" height="40" src="./images/co2Kgs.png" onclick="changeUnits()">
-      <table id="leaderboardTable">
-        <thead>
-          <td></td>
-          <td></td>
-          <td><button id="co2Button" class="changeButton" onclick="changeUnits()"></button></td> <!--removed text-->
-        </thead>
-        <tbody id="leaderboardBody">
-          <tr>
-            <td name="position">1</td>
-            <td name="name">Anna</td>
-            <td name="co2">34.00</td>
-          </tr>
-          <tr>
-            <td name="position">2</td>
-            <td name="name">Max</td>
-            <td name="co2">30.00</td>
-          </tr>
-          <tr>
-            <td name="position">3</td>
-            <td name="name">Kim</td>
-            <td name="co2">15.75</td>
-          </tr>
-          <tr>
-            <td name="position">4</td>
-            <td name="name">Chris</td>
-            <td name="co2">7.30</td>
-          </tr>
-          <tr>
-            <td name="position">5</td>
-            <td name="name">Bernard</td>
-            <td name="co2">6.10</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    </div>
-
-    <div class="nav bottom">
-      <div class="row">
-        <div class="button-container center not-active">
-          <a href="./LogIn.html" class="button"><i class="material-icons-outlined md-36">account_circle</i></a>
+        <div class="nav top">
+            <div class="row">
+                <div class="logo-container center">
+                    <img id="logo" src="images/logo.svg">
+                </div>
+            </div>
         </div>
-        <div class="button-container center active">
-          <a href="./home.html" class="button"><i class="material-icons-outlined md-36">map</i></a>
+
+        <div class="center">
+            <div class="background grey">
+                <div class="row x-large">
+                    <div class="profile-container center">
+                        <img class="profile-image" src="images/person.png">
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="name">
+                    <h1>History</h1>
+                </div>
+            </div>
+            <div class="row xx-large">
+                <img class="img" src="images/Profile_Statistics.png">
+            </div>
+            <div class="row">
+                <div class="row">
+                    <div class="name">
+                        <h1>Leaderboard</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row xx-large">
+                <img class="img" src="images/Profile_Statistics.png">
+            </div>
+            <div class="row">
+                <div class="button-container border green center">
+                    <button type="button">Change measurement</button>
+                </div>
+            </div>
         </div>
-      </div>
+
+        <div class="nav bottom">
+            <div class="row">
+                <div class="button-container center active">
+                    <a href="./LogIn.html" class="button"><i class="material-icons-outlined md-36">account_circle</i></a>
+                </div>
+                <div class="button-container center not-active">
+                    <a href="./home.html" class="button"><i class="material-icons-outlined md-36">map</i></a>
+                </div>
+            </div>
+
+        </div>
     </div>
-  </div>
 </body>
 
-<script type="text/javascript">
-  colourizeRows();
-</script>
+
 </html>

@@ -316,7 +316,7 @@ td {
     text-align: left;
 }
 
-td:last-child {
+td[name="co2"] {
     text-align: right;
 }
 
@@ -324,8 +324,29 @@ tr {
     width: 100%;
 }
 
+tr:first-child td:first-child {
+    border-top-left-radius: 10px;
+}
+
+tr:first-child td:last-child {
+    border-top-right-radius: 10px;
+}
+
+tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
 tr:nth-child(odd) {
     background-color: #e9e9e9;
+}
+
+tr:first-child {
+    background-color: #58B947;
+    color: white;
 }
 
 sup,
@@ -337,4 +358,9 @@ sub {
 
 sub {
     top: 0.2em;
+}
+
+#personalTable tr {
+    color: unset;
+    background-color: unset;
 }

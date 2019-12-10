@@ -168,7 +168,7 @@ a.button {
 }
 
 .xx-large {
-    height: 170px;
+    height: 150px;
 }
 
 .register-container {
@@ -303,4 +303,38 @@ p[name="co2"] {
 
 .img {
     height: 100%;
+}
+
+table {
+    width: 250px;
+    border-collapse: collapse;
+}
+
+td {
+    font-size: 1.1rem;
+    padding: 0.3em 1em;
+    text-align: left;
+}
+
+td:last-child {
+    text-align: right;
+}
+
+tr {
+    width: 100%;
+}
+
+tr:nth-child(odd) {
+    background-color: #e9e9e9;
+}
+
+sup,
+sub {
+    vertical-align: baseline;
+    position: relative;
+    top: -0.2em;
+}
+
+sub {
+    top: 0.2em;
 }

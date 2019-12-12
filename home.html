@@ -2,96 +2,96 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="./style/main.css">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./style/main.css">
 
-  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>CO2GO</title>
+    <title>CO2GO</title>
 </head>
 
 <body>
-  <div class="content">
+    <div class="content">
 
 
-    <div class="nav top">
+        <div class="nav top">
 
-      <div class="row">
-        <div class="logo-container center">
-          <img id="logo" src="./images/logo.svg">
-        </div>
-      </div>
+            <div class="row">
+                <div class="logo-container center">
+                    <img id="logo" src="./images/logo.svg">
+                </div>
+            </div>
 
-      <div class="">
-        <div class="row">
-          <div class="user-input">
-            <input onkeyup="updateTravelButton()" id="from-input" type="text" name="from" placeholder="From" value="Current location">
-            <button type="button" onclick="setFrom(name)" name="current-location"><i class="material-icons-outlined md-72">my_location</i></button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="user-input">
-            <input onkeyup="updateTravelButton()" id="to-input" type="text" name="to" placeholder="To">
-            <button type="button" onclick="setTo(name)" name="predetermined-home"><i class="material-icons-outlined md-72">home</i></button>
-            <button type="button" onclick="setTo(name)" name="predetermined-work"><i class="material-icons-outlined md-72">work_outline</i></button>
-          </div>
-        </div>
-      </div>
+            <div class="">
+                <div class="row">
+                    <div class="user-input">
+                        <input onkeyup="updateTravelButton()" id="from-input" type="text" name="from" placeholder="From" value="Current location">
+                        <button type="button" onclick="setFrom(name)" name="current-location"><i class="material-icons-outlined md-72">my_location</i></button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="user-input">
+                        <input onkeyup="updateTravelButton()" id="to-input" type="text" name="to" placeholder="To">
+                        <button type="button" onclick="setTo(name)" name="predetermined-home"><i class="material-icons-outlined md-72">home</i></button>
+                        <button type="button" onclick="setTo(name)" name="predetermined-work"><i class="material-icons-outlined md-72">work_outline</i></button>
+                    </div>
+                </div>
+            </div>
 
-      <div id="search-route" class="row">
-        <div id="travel-button" class="button-container background grey center">
-          <button onclick="travelRoute()" type="button" name="search-route">Travel</button>
+            <div id="search-route" class="row">
+                <div id="travel-button" class="button-container background grey center">
+                    <button onclick="travelRoute()" type="button" name="search-route">Travel</button>
+                </div>
+            </div>
+            <div id="travel-options" class="row hidden">
+                <div id="walking" class="button-container active center">
+                    <button type="button" onclick="setActiveTransportationMode(name)" name="walking"><i class="material-icons-outlined md-72">directions_walk</i></button>
+                    <p name="co2">0.00</p>
+                </div>
+                <div id="bicycling" class="button-container center">
+                    <button type="button" onclick="setActiveTransportationMode(name)" name="bicycling"><i class="material-icons-outlined md-72">directions_bike</i></button>
+                    <p name="co2">0.00</p>
+                </div>
+                <div id="transit" class="button-container center">
+                    <button type="button" onclick="setActiveTransportationMode(name)" name="transit"><i class="material-icons-outlined md-72">directions_transit</i></button>
+                    <p name="co2">0.00</p>
+                </div>
+                <div id="driving" class="button-container center">
+                    <button type="button" onclick="setActiveTransportationMode(name)" name="driving"><i class="material-icons-outlined md-72">directions_car</i></button>
+                    <p name="co2">0.00</p>
+                </div>
+                <div id="co2ToolTip" class="co2ToolTip">
+                    <img id="co2buttonstyle" name="unitsImage" width="30px" height="30px" src="./images/co2Kgs.png" onclick="changeUnits()">
+                    <!--<button id="co2Button" onclick="changeUnits()">Change<br>unit</button>-->
+                </div>
+            </div>
         </div>
-      </div>
-      <div id="travel-options" class="row hidden">
-        <div id="walking" class="button-container active center">
-          <button type="button" onclick="setActiveTransportationMode(name)" name="walking"><i class="material-icons-outlined md-72">directions_walk</i></button>
-          <p name="co2">0.00</p>
-        </div>
-        <div id="bicycling" class="button-container center">
-          <button type="button" onclick="setActiveTransportationMode(name)" name="bicycling"><i class="material-icons-outlined md-72">directions_bike</i></button>
-          <p name="co2">0.00</p>
-        </div>
-        <div id="transit" class="button-container center">
-          <button type="button" onclick="setActiveTransportationMode(name)" name="transit"><i class="material-icons-outlined md-72">directions_transit</i></button>
-          <p name="co2">0.00</p>
-        </div>
-        <div id="driving" class="button-container center">
-          <button type="button" onclick="setActiveTransportationMode(name)" name="driving"><i class="material-icons-outlined md-72">directions_car</i></button>
-          <p name="co2">0.00</p>
-        </div>
-        <div id="co2ToolTip" class="co2ToolTip">
-          <img id="co2buttonstyle" name="unitsImage" width="30px" height="30px" src="./images/co2Kgs.png" onclick="changeUnits()">
-          <!--<button id="co2Button" onclick="changeUnits()">Change<br>unit</button>-->
-        </div>
-      </div>
-    </div>
 
 
-    <div id="map" class="row">
-      <iframe frameborder="0" src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAHLEWwDpg-DyyJhDzehuHP39vzwicOxDg
+        <div id="map" class="row">
+            <iframe frameborder="0" src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAHLEWwDpg-DyyJhDzehuHP39vzwicOxDg
   &origin=
   &destination=
   &mode=walking" allowfullscreen>
       </iframe>
-    </div>
+        </div>
 
-    <div class="nav bottom">
-      <div class="row">
-        <div class="button-container center not-active">
-          <a href="./LogIn.html" class="button"><i class="material-icons-outlined md-36">account_circle</i></a>
+        <div class="nav bottom">
+            <div class="row">
+                <div class="button-container center not-active">
+                    <a href="./LogIn.html"><i class="material-icons-outlined md-36">account_circle</i></a>
+                </div>
+                <div class="button-container center active">
+                    <a href="./home.html"><i class="material-icons-outlined md-36">map</i></a>
+                </div>
+            </div>
         </div>
-        <div class="button-container center active">
-          <a href="./home.html" class="button"><i class="material-icons-outlined md-36">map</i></a>
-        </div>
-      </div>
     </div>
-  </div>
-  <script src="./script/main.js"></script>
+    <script src="./script/main.js"></script>
 </body>
 
 </html>

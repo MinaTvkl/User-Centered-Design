@@ -4,8 +4,17 @@
     --main-row-padding-top-bottom: 5px;
 }
 
-* {
+button {
     -webkit-appearance: none;
+    border: 0;
+}
+
+a.button {
+    -webkit-appearance: none;
+    border: 0;
+    background-color: none;
+    border: none;
+    outline: none;
 }
 
 body {
